@@ -1,0 +1,24 @@
+﻿<Window x:Name="OrdleWindow" x:Class="VN_OrdleWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VN_OrdleWPF"
+        mc:Ignorable="d"
+        Title="Ordle Wordgame by Vinh Nguyen" Height="654" Width="520" Background="#FF3C3C3C" Initialized="OrdleWindow_Initialized">
+    <Grid Margin="0,0,0,-16">
+        <WrapPanel x:Name="GameBoard" Initialized="GameBoard_Initialized" Margin="0,69,0,0" Height="280" Width="300" HorizontalAlignment="Center" Background="#4C000000" VerticalAlignment="Top"/>
+        <TextBlock x:Name="InstructionText" VerticalAlignment="Top" Text="Guess the right five letter word!" TextWrapping="Wrap" Margin="0,376,0,0" HorizontalAlignment="Center" FontSize="24" FontFamily="Franklin Gothic Heavy" Foreground="White"/>
+        <Grid x:Name="Answer_Grid" HorizontalAlignment="Center" Margin="0,421,0,0" VerticalAlignment="Top" Width="452" Height="101" Background="#3F000000">
+            <TextBox Width="64" TextWrapping="Wrap" x:Name="Letter1" MaxLength="1" MaxLines="1" HorizontalContentAlignment="Center" Height="65" FontSize="48" FontFamily="Verdana" Margin="56,18,332,18" TextChanged="Letter1_TextChanged" GotFocus="Letter1_GotFocus" KeyDown="Letter1_KeyDown"/>
+            <TextBox Width="64" TextWrapping="Wrap" x:Name="Letter2" MaxLength="1" MaxLines="1" Margin="125,18,263,18" HorizontalContentAlignment="Center" Height="65" FontSize="48" FontFamily="Verdana" TextChanged="Letter1_TextChanged" GotFocus="Letter1_GotFocus" KeyDown="Letter1_KeyDown"/>
+            <TextBox Width="64" TextWrapping="Wrap" x:Name="Letter3" MaxLength="1" MaxLines="1" HorizontalContentAlignment="Center" Height="65" FontSize="48" FontFamily="Verdana" TextChanged="Letter1_TextChanged" GotFocus="Letter1_GotFocus" KeyDown="Letter1_KeyDown"/>
+            <TextBox Width="64" TextWrapping="Wrap" x:Name="Letter4" MaxLength="1" MaxLines="1" Margin="263,18,125,18" HorizontalContentAlignment="Center" Height="65" FontSize="48" FontFamily="Verdana" TextChanged="Letter1_TextChanged" GotFocus="Letter1_GotFocus" KeyDown="Letter1_KeyDown"/>
+            <TextBox Width="64" TextWrapping="Wrap" x:Name="Letter5" MaxLength="1" MaxLines="1" Margin="332,18,56,18" HorizontalContentAlignment="Center" Height="65" FontSize="48" FontFamily="Verdana" TextChanged="Letter1_TextChanged" GotFocus="Letter1_GotFocus" KeyDown="Letter1_KeyDown"/>
+        </Grid>
+        <Button x:Name="Submit" Content="Submit" HorizontalAlignment="Center" Height="44" Margin="0,543,0,0" VerticalAlignment="Top" Width="154" FontFamily="Verdana" FontSize="24" FontWeight="Bold" Click="Submit_Click"/>
+        <Label x:Name="Title" Content="5 Letter Ordle" HorizontalAlignment="Center" Height="57" Margin="0,10,0,0" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Impact" FontSize="36" Foreground="White"/>
+        <Label Content="Select a Box and enter a letter" HorizontalAlignment="Left" Height="23" Margin="34,408,0,0" VerticalAlignment="Top" Width="201" Foreground="White" FontFamily="Arial" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
